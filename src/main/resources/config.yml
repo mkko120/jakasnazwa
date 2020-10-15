@@ -1,0 +1,35 @@
+#
+#
+#**********************************************************
+#
+#             ***** Creative plugin *****
+#
+#                   author: mkko120
+#                 all rights reserved
+#
+#             ***************************
+#
+#**********************************************************
+#
+#
+#Is message randomized? true or false
+Is randomized?: false
+#If true make it look like this:
+#
+#Message:
+# - <message>
+# - <second message>
+#
+# etc...
+#
+#If false don't change anything.
+#Message for Scheduled messages:
+Message: Add your message here!
+#Delay of scheduled messages:
+Ticks: 8000
+#Messages for command:
+Messages:
+  - To jest pierwsza wiadomosc.
+  - To jest druga wiadomosc.
+  - To jest trzecia wiadomosc.
+  - To jest czwarta wiadomosc.

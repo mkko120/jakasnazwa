@@ -1,0 +1,92 @@
+name: creative
+version: 3.0-SNAPSHOT
+main: io.github.mkko120.creative.Creative
+description: Plugin developed by mkko120 for TrollCraft.pl
+author: mkko120
+commands:
+  cvcenter:
+    description: Teleports to the center of world.
+    aliases:
+      - twc
+    permission: creative.center
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvbroadcast:
+    description: Komenda na wiadomosci lokalne!
+    aliases:
+      - bc
+    permission: creative.bc
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvfood:
+    description: Gives player 16 steaks.
+    aliases:
+      - f
+    permission: creative.food
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvqotd:
+    description: Sends random message with question of the day!
+    aliases:
+      - q
+    permission: creative.qotd
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvmessage:
+    descripton: Private text messgaes!
+    aliases:
+      - msg
+      - cvmsg
+    permission: creative.msg
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvteleport:
+    description: Teleports to player!
+    aliases:
+      - ctp
+    permission: creative.tp
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvteleporthere:
+    description: Sends random message with question of the day!
+    aliases:
+      - ctphere
+    permission: creative.tphere
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  cvteleportall:
+    description: Teleports all players to one location!
+    aliases:
+      - ctpall
+    permission: creative.tpall
+    permission-message: OOOFFF! nie masz prawa do tej komendy!
+  warp:
+    description: Teleports to warp!
+    permission: creative.warp
+    premission-message: OOOFFF! nie masz prawa do tej komendy!
+  setwarp:
+    description: Sets a warp!
+    permission: creative.setwarp
+    premission-message: OOOFFF! nie masz prawa do tej komendy!
+  delwarp:
+    description: Deletes a warp!
+    permission: creative.delwarp
+    premission-message: OOOFFF! nie masz prawa do tej komendy!
+  home:
+    description: home
+    permission: creative.home
+permissions:
+  creative.admin:
+    children:
+      - creative.setwarp
+      - creative.delwarp
+      - creative.warp
+      - creative.tpall
+      - creative.tphere
+      - creative.tp
+      - creative.msg
+      - creative.qotd
+      - creative.food
+      - creative.bc
+      - creative.center
+      - creative.home
+    default: op
+  creative.warp:
+    default: true
+  creative.msg:
+    default: true
+  creative.food:
+    default: true
