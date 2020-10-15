@@ -1,7 +1,7 @@
 package io.github.mkko120.creative.Commands;
 
+import io.github.mkko120.creative.ConfigsManager;
 import io.github.mkko120.creative.Creative;
-import io.github.mkko120.creative.CustomConfigCore.CustomConfig;
 import io.github.mkko120.creative.Helper;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -26,7 +26,7 @@ public class SetwarpCommand implements CommandExecutor {
         }
 
         //Getting list of all warps.
-        List<String> warps = (List<String>) CustomConfig.getWarpsCustomConfig().getList("Warps");
+        List<String> warps = (List<String>) ConfigsManager.getWarpsCustomConfig().getList("Warps");
 
             if (args[0].equals("")) {
 
@@ -35,7 +35,7 @@ public class SetwarpCommand implements CommandExecutor {
             }
             else {
 
-                FileConfiguration cconf = CustomConfig.getWarpsCustomConfig();
+                FileConfiguration cconf = ConfigsManager.getWarpsCustomConfig();
 
                 String name = args[0];
                 if (args.length > 1) {

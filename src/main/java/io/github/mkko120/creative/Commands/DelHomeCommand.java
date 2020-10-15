@@ -1,7 +1,7 @@
 package io.github.mkko120.creative.Commands;
 
+import io.github.mkko120.creative.ConfigsManager;
 import io.github.mkko120.creative.Creative;
-import io.github.mkko120.creative.CustomConfigCore.CustomConfig;
 import io.github.mkko120.creative.Helper;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -16,7 +16,7 @@ public class DelHomeCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        FileConfiguration cconf = CustomConfig.getHomesCustomConfig();
+        FileConfiguration cconf = ConfigsManager.getHomesCustomConfig();
 
         File homesConfigFile = new File(Creative.getInstance().getDataFolder(), "homes.yml");
 

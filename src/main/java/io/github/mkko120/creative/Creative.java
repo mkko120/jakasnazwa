@@ -1,7 +1,6 @@
 package io.github.mkko120.creative;
 
 import io.github.mkko120.creative.Commands.*;
-import io.github.mkko120.creative.CustomConfigCore.CustomConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -109,8 +108,12 @@ public final class Creative extends JavaPlugin {
 
 
         }
-        CustomConfig.getInstance().loadHomes();
-        CustomConfig.getInstance().loadWarps();
+        try {
+            ConfigsManager.getInstance().loadWarps();
+            ConfigsManager.getInstance().loadHomes();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
 
     }
 

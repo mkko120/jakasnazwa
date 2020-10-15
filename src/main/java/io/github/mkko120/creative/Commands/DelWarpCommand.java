@@ -1,7 +1,7 @@
 package io.github.mkko120.creative.Commands;
 
+import io.github.mkko120.creative.ConfigsManager;
 import io.github.mkko120.creative.Creative;
-import io.github.mkko120.creative.CustomConfigCore.CustomConfig;
 import io.github.mkko120.creative.Helper;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -32,7 +32,7 @@ public class DelWarpCommand implements CommandExecutor {
 
 
             //Getting list of all warps.
-            List<String> warps = (List<String>) CustomConfig.getWarpsCustomConfig().getList("Warps");
+            List<String> warps = (List<String>) ConfigsManager.getWarpsCustomConfig().getList("Warps");
 
             Player player = (Player) sender;
 
@@ -49,7 +49,7 @@ public class DelWarpCommand implements CommandExecutor {
                 }
 
             }
-            if (!CustomConfig.getWarpsCustomConfig().isSet(name)) {
+            if (!ConfigsManager.getWarpsCustomConfig().isSet(name)) {
                 sender.sendMessage(Helper.color("&cNie ma takiego warpa!"));
                 return true;
             }
@@ -57,10 +57,10 @@ public class DelWarpCommand implements CommandExecutor {
             try {
 
                 warps.remove(name);
-                CustomConfig.getWarpsCustomConfig().getConfigurationSection(name).set(name, null);
+                ConfigsManager.getWarpsCustomConfig().getConfigurationSection(name).set(name, null);
 
                 try {
-                    CustomConfig.getWarpsCustomConfig().save(warpsConfigFile);
+                    ConfigsManager.getWarpsCustomConfig().save(warpsConfigFile);
                 } catch (Exception error){
                     error.printStackTrace();
                 }

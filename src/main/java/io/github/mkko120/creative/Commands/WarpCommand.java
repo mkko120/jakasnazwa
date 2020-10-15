@@ -1,6 +1,6 @@
 package io.github.mkko120.creative.Commands;
 
-import io.github.mkko120.creative.CustomConfigCore.CustomConfig;
+import io.github.mkko120.creative.ConfigsManager;
 import io.github.mkko120.creative.Helper;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -24,7 +24,7 @@ public class WarpCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        FileConfiguration cconf = CustomConfig.getWarpsCustomConfig();
+        FileConfiguration cconf = ConfigsManager.getWarpsCustomConfig();
 
         //Getting list of all warps.
         ArrayList warps = (ArrayList) cconf.getList("Warps");
